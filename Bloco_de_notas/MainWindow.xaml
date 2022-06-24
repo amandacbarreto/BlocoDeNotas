@@ -8,31 +8,39 @@
         Icon= " "
         Title="Sem título - Bloco de notas" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
 
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <!--
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        -->
 
-        <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="-0.263,-1.548" Width="75" Height="25"/>
+        <Label Content="Arquivo" 
+               Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="-0.263,-1.548" Width="auto" Height="25" FontSize="10"/>
+        <Label Content="Editar" 
+               Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="-0.263,-1.548" Width="auto" Height="25" FontSize="10"/>
+        <Label Content="Formatar"
+               Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="-0.263,-1.548" Width="auto" Height="25" FontSize="10"/>
+        <Label Content="Exibir"
+               Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="-0.263,-1.548" Width="auto" Height="25" FontSize="10"/>
+        <Label Content="Ajuda"
+               Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="-0.263,-1.548" Width="auto" Height="25" FontSize="10"/>
     </Grid>
 
 </Window>
