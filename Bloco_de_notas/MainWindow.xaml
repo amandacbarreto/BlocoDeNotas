@@ -5,15 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bloco_de_notas"
         mc:Ignorable="d"
-        Icon= " "
         Title="Sem título - Bloco de notas" Height="450" Width="800">
     <Grid>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition x:Name="Linha" Height="2"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="26"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -25,22 +24,118 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
 
-        <Label Content="Arquivo" 
-               Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="-0.263,-1.548" Width="auto" Height="25" FontSize="10"/>
-        <Label Content="Editar" 
-               Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="-0.263,-1.548" Width="auto" Height="25" FontSize="10"/>
-        <Label Content="Formatar"
-               Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="-0.263,-1.548" Width="auto" Height="25" FontSize="10"/>
-        <Label Content="Exibir"
-               Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="-0.263,-1.548" Width="auto" Height="25" FontSize="10"/>
-        <Label Content="Ajuda"
-               Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="-0.263,-1.548" Width="auto" Height="25" FontSize="10"/>
+        <Rectangle  Grid.ColumnSpan="12" Height="auto" Grid.Row="1"  Fill="#efefef"  Width="auto"/>
+        <Label Content="Ln 1, Col 1"
+               Grid.Column="8"
+               Grid.Row="3" 
+               HorizontalAlignment="Center" 
+               Background="#efefef"
+               VerticalAlignment="Top" 
+               RenderTransformOrigin="-0.263,-1.548" 
+               Width="140" Height="auto" 
+               FontSize="11.5" Margin="0,0,0,0" BorderThickness="0,1,0,0" ClipToBounds="True" BorderBrush="Gainsboro"/>
+        <Label Content="100 %"
+               Grid.Column="9"
+               Grid.Row="3"  
+               Background="#efefef" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center" 
+               RenderTransformOrigin="-0.263,-1.548" 
+               Width="50" Height="auto" 
+               FontSize="11.5" BorderThickness="1,1,0,0" SnapsToDevicePixels="True" BorderBrush="Gainsboro"/>
+        <Label Content="Windows (CRLF)" 
+               Grid.Column="10"
+               Grid.Row="3"  
+               Background="#efefef" 
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center" 
+               RenderTransformOrigin="-0.263,-1.548" 
+               Width="120" 
+               Height="auto" 
+               FontSize="11.5" BorderBrush="Gainsboro" 
+               BorderThickness="1,1,0,0"/>
+        <Label Content="UTF-8"
+               Grid.Column="11" 
+               Grid.Row="3"
+               Background="#efefef" 
+               HorizontalAlignment="Center"
+               VerticalAlignment="Top" 
+               RenderTransformOrigin="-0.263,-1.548" 
+               Width="110" 
+               Height="auto" 
+               FontSize="11.5" 
+              BorderThickness="1,1,0,0" BorderBrush="Gainsboro"/>
+
+        <Rectangle  Grid.ColumnSpan="8" Height="auto" Grid.Row="3" Stroke="#FFDCDCDC"  Fill="#efefef"  Width="auto"/>
+
+        <Menu Grid.Column="0"  Grid.Row="0" Width="auto" Height="20" VerticalAlignment="Top" Background="White" Foreground="Black">
+            <MenuItem Header="Arquivo">
+                <MenuItem Header="_Novo" Background="#efefef"  InputGestureText="Ctrl+N"/>
+                <MenuItem Header="_Nova janela" Background="#efefef" InputGestureText="Ctrl+Shift+N" />
+                <MenuItem Header="_Abrir" Background="#efefef" InputGestureText="Ctrl+O"/>
+                <MenuItem Header="_Salvar" Background="#efefef" InputGestureText="Ctrl+S"/>
+                <MenuItem Header="_Salvar como" Background="#efefef" InputGestureText="Ctrl+Shift+S"/>
+                <Separator />
+                <MenuItem Header="_Configurar página" Background="#efefef" />
+                <MenuItem Header="_Imprimir" Background="#efefef" InputGestureText="Ctrl+P"/>
+                <Separator />
+                <MenuItem Header="_Sair" Background="#efefef"/>
+            </MenuItem>
+        </Menu>
+
+        <Menu Grid.Column="1"  Grid.Row="0" Width="auto" Height="20" VerticalAlignment="Top" Background="White" Foreground="Black">
+            <MenuItem Header="Editar">
+                <MenuItem Header="_Desfazer" Background="#efefef"  InputGestureText="Ctrl+Z"/>
+                <Separator />
+                <MenuItem Header="_Recortar" Background="#efefef" Foreground="#818181" InputGestureText="Ctrl+X" />
+                <MenuItem Header="_Copiar" Background="#efefef" Foreground="#818181" InputGestureText="Ctrl+C"/>
+                <MenuItem Header="_Colar" Background="#efefef" InputGestureText="Ctrl+V"/>
+                <MenuItem Header="_Excluir" Background="#efefef" Foreground="#818181" InputGestureText="Del"/>
+                <Separator />
+                <MenuItem Header="_Buscar com o Bing..." Background="#efefef" Foreground="#818181" InputGestureText="Ctrl+E"/>
+                <MenuItem Header="_Localizar" Background="#efefef" InputGestureText="Ctrl+F"/>
+                <MenuItem Header="_Localizar próxima" Background="#efefef" InputGestureText="F3"/>
+                <MenuItem Header="_Localizar anterior" Background="#efefef" InputGestureText="Shift+F3"/>
+                <MenuItem Header="_Substituir..." Background="#efefef" InputGestureText="Ctrl+H" />
+                <MenuItem Header="_Ir para..." Background="#efefef" Foreground="#818181" InputGestureText="Ctrl+G"/>
+                <Separator />
+                <MenuItem Header="_Selecionar tudo" Background="#efefef" InputGestureText="Ctrl+A"/>
+                <MenuItem Header="_Hora/data" Background="#efefef" InputGestureText="F5"/>
+            </MenuItem>
+        </Menu>
+
+        <Menu Grid.Column="2"  Grid.Row="0" Width="auto" Height="20" VerticalAlignment="Top" Background="White" Foreground="Black">
+            <MenuItem Header="Formatar">
+                <MenuItem Header="_Quebra automática de linha" Background="#efefef" IsCheckable="true"/>
+                <MenuItem Header="_Fonte..." Background="#efefef"/>
+            </MenuItem>
+        </Menu>
+
+        <Menu Grid.Column="3"  Grid.Row="0" Width="auto" Height="20" VerticalAlignment="Top" Background="White" Foreground="Black">
+            <MenuItem Header="Exibir">
+                <MenuItem Header="_Zoom" Background="#efefef">
+                    <MenuItem Header="_Ampliar" Background="#efefef" InputGestureText="Ctrl+sinal de adição"/>
+                    <MenuItem Header="_Reduzir" Background="#efefef" InputGestureText="Ctrl+sinal de subtração"/>
+                    <MenuItem Header="_Restaurar zoom padrão" Background="#efefef" InputGestureText="Ctrl+0"/>
+                </MenuItem>
+                <MenuItem Header="_Barra de status" Background="#efefef" IsCheckable="true"/>
+            </MenuItem>
+        </Menu>
+       
+        <Menu Grid.Column="4"  Grid.Row="0" Width="auto" Height="20" VerticalAlignment="Top" Background="White" Foreground="Black">
+            <MenuItem Header="Ajuda">
+                <MenuItem Header="_Exibir ajuda" Background="#efefef"/>
+                <MenuItem Header="_Enviar Comentários" Background="#efefef"/>   
+                <Separator />   
+                <MenuItem Header="_Sobre o bloco de notas" Background="#efefef"/>
+            </MenuItem>
+        </Menu>
     </Grid>
 
 </Window>
