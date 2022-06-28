@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bloco_de_notas"
         mc:Ignorable="d"
-        Title="Sem título - Bloco de notas" Height="450" Width="800">
+        Title="Sem título - Bloco de notas" Height="450" Width="800"
+        FocusManager.FocusedElement="{Binding ElementName=contentBox}"
+
+ >
     <Grid>
 
         <Grid.RowDefinitions>
@@ -140,7 +143,7 @@
         <TextBox 
             Grid.ColumnSpan="12" 
             Grid.Row="2" 
-            Name="textBox" 
+            Name="contentBox" 
             TextWrapping="Wrap"
             AcceptsReturn="True"
             VerticalScrollBarVisibility="Visible"
