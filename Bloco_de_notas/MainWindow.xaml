@@ -136,6 +136,18 @@
                 <MenuItem Header="_Sobre o bloco de notas" Background="#efefef"/>
             </MenuItem>
         </Menu>
+
+        <TextBox 
+            Grid.ColumnSpan="12" 
+            Grid.Row="2" 
+            Name="textBox" 
+            TextWrapping="Wrap"
+            AcceptsReturn="True"
+            VerticalScrollBarVisibility="Visible"
+            FontFamily="Consolas"
+            FontSize="14" 
+        />
+        
     </Grid>
 
 </Window>
